@@ -166,6 +166,8 @@ public class Cat {
         this.adoptionFees = adoptionFees;
     }
     
+    // filter function start
+    
     public ArrayList<Cat> FilterByBreed(String breed){
         ArrayList Filtered= new ArrayList();
         for(Cat cat:cats){
@@ -195,5 +197,48 @@ public class Cat {
         }
         return Filtered;
     }
+    
+    public ArrayList<Cat> FilterByBehavior(String behavior){
+        ArrayList Filtered = new ArrayList();
+        for(Cat cat:cats){
+            if(cat.getBehavior().equalsIgnoreCase(behavior)){
+                Filtered.add(cat);
+            }
+        }
+        return Filtered;
+    }
+    
+    public ArrayList<Cat> FilterDisabled(){
+        ArrayList Filtered = new ArrayList();
+        for(Cat cat:cats){
+            if(cat.isDisabled()==true){
+                Filtered.add(cat);
+            }
+        }
+        return Filtered;
+    }
+    
+    public ArrayList<Cat> FilterLikesChildren(){
+        ArrayList Filtered = new ArrayList();
+        for(Cat cat:cats){
+            if(cat.isLikesChildrens()==true){
+                Filtered.add(cat);
+            }
+        }
+        return Filtered;
+    }
+    
+    public ArrayList<Cat> FilterLikesCats(){
+         ArrayList Filtered = new ArrayList();
+        for(Cat cat:cats){
+            if(cat.isLikesCats()==true){
+                Filtered.add(cat);
+            }
+        }
+        return Filtered;
+    }
 
+    // filter function end 
+    
+    
 }
