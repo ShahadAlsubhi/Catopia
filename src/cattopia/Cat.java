@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package cattopia;
-
+import java.util.*;
 /**
  *
  * @author shaha
@@ -13,7 +13,7 @@ public class Cat {
     
     private int catId;
     private String catName;
-    private char sex;
+    private String sex;
     private int age;
     private String breed;
     private Cat bound;
@@ -24,10 +24,11 @@ public class Cat {
     private boolean likesChildrens;
     private String adoptionState;
     private String adoptionReason;
-//    private Arraylist<String> adoptionUpdates;  // for some reason it doesn't work
+    private ArrayList<String> adoptionUpdates;  
     private int adoptionFees;
+    private ArrayList<Cat> cats;
 
-    public Cat(int catId, String catName, char sex, int age, String breed, Cat bound, String behavior, boolean disabled, String medicalHistory, boolean likesCats, boolean likesChildrens, String adoptionState, String adoptionReason, int adoptionFees) {
+    public Cat(int catId, String catName, String sex, int age, String breed, Cat bound, String behavior, boolean disabled, String medicalHistory, boolean likesCats, boolean likesChildrens, String adoptionState, String adoptionReason, int adoptionFees) {
         this.catId = catId;
         this.catName = catName;
         this.sex = sex;
@@ -61,11 +62,11 @@ public class Cat {
         this.catName = catName;
     }
 
-    public char getSex() {
+    public String getSex() {
         return sex;
     }
 
-    public void setSex(char sex) {
+    public void setSex(String sex) {
         this.sex = sex;
     }
 
@@ -149,13 +150,13 @@ public class Cat {
         this.adoptionReason = adoptionReason;
     }
 
-//    public Arraylist getAdoptionUpdates() {
-//        return adoptionUpdates;
-//    }
-//
-//    public void setAdoptionUpdates(Arraylist adoptionUpdates) {
-//        this.adoptionUpdates = adoptionUpdates;
-//    }
+    public ArrayList getAdoptionUpdates() {
+        return adoptionUpdates;
+    }
+
+   public void setAdoptionUpdates(ArrayList adoptionUpdates) {
+        this.adoptionUpdates = adoptionUpdates;
+    }
 
     public int getAdoptionFees() {
         return adoptionFees;
@@ -163,6 +164,36 @@ public class Cat {
 
     public void setAdoptionFees(int adoptionFees) {
         this.adoptionFees = adoptionFees;
+    }
+    
+    public ArrayList<Cat> FilterByBreed(String breed){
+        ArrayList Filtered= new ArrayList();
+        for(Cat cat:cats){
+            if(cat.getBreed().equalsIgnoreCase(breed)){
+                Filtered.add(cat);
+            }
+        }
+        return Filtered;
+    }
+    
+    public ArrayList<Cat> FilterByAge(int age){
+        ArrayList Filtered= new ArrayList();
+        for(Cat cat:cats){
+            if(cat.getAge()==age){
+                Filtered.add(cat);
+            }
+        }
+        return Filtered;
+    }
+    
+    public ArrayList<Cat> FilterByGender(String gender){
+        ArrayList Filtered= new ArrayList();
+        for(Cat cat:cats){
+            if(cat.getSex().equalsIgnoreCase(gender)){
+                Filtered.add(cat);
+            }
+        }
+        return Filtered;
     }
 
 }
