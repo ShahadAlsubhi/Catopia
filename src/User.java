@@ -51,7 +51,7 @@ public class User {
          int age = input.nextInt();
          String breed = input.next();
          String catName = input.next();
-         Cat bound; Searchbound(String catName);
+         Cat bound =  Searchbound(String catName);
          String behavior = input.next();
          boolean disabled = input.nextBoolean();
          String medicalHistory = input.next();
