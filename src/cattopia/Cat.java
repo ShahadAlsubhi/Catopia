@@ -240,5 +240,20 @@ public class Cat {
 
     // filter function end 
     
+           // A method to search for cat’s bound by its name :
     
+    public Cat Searchbound(String boundName){
+        Cat boundCat = null ;
+        for(Cat cat:cats){
+            if(cat.getCatName().equalsIgnoreCase(boundName)){
+               boundCat = cat ;
+            }
+        }
+        return boundCat;
+    }
+      
+    // A method to add a new cat to the database ( arraylist ) : 
+      public void addNewCattoDatabase(Cat cat){
+        cats.add(cat) ;
+      }
 }
