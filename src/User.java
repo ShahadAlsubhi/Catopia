@@ -1,6 +1,14 @@
 
-public class User {
+import java.util.*;
 
+
+public class User {
+    private String UserID;
+    private String Name;
+    private String Location;
+    private String ContactInfo;
+    private ArrayList<String> OwenedCats;
+    private ArrayList<String> DonateTo; 
     // a method to request adopting a cat from their owner while checking if the requirement are met
 //    public static void adoptionReq(Cat cat, Individual user, User owner) {
 //        // check if the conditions are met
