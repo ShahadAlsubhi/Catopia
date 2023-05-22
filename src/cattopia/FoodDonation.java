@@ -1,3 +1,5 @@
+package cattopia;
+
 import java.util.*;
 
 public class FoodDonation extends Donation{
