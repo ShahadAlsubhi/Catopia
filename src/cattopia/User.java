@@ -157,17 +157,20 @@ public class User {
      
         
     } Offer cat end here !! */
-/*
+
+/* 
+    //Donation method start here
+    
     public static void donate(){
         System.out.println("What type of donation will you make?/nFood donation/nMoney donation/nToys donation");
         Scanner input = new Scanner(System.in);
         String DonationType = input.next();
         if(DonationType.equalsIgnoreCase("Food donation")){
-            System.out.println("Enter the food information in this order: Brand name, Exp date, Manufec date, size.");
+            System.out.println("Enter the food information in this order: Brand name, Exp date as (dd/mm/yyyy), Manufec date as (dd/mm/yyyy), size.");
             String BrandName = input.next();
-            Date ExpDate = 
-            Date ManufecDate = 
-            String Size = input.next();
+            String ExpDate = input.next();
+            String ManufecDate = input.next();
+            String size = input.next();
             System.out.println("The brand of the food:"+BrandName+"/nThe food Exp date:"+ExpDate+"/nThe food Manufec date:"+ManufecDate+"/nThe food size:"+size);
         }
         if(DonationType.equalsIgnoreCase("Money donation")){
@@ -188,5 +191,6 @@ public class User {
         }
             
     }
+    //Donation method end here
     */
 }
