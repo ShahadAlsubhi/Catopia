@@ -3,7 +3,6 @@ package cattopia;
 
 import java.util.*;
 
-
 public class User {
     private String UserID;
     private String Name;
@@ -126,20 +125,19 @@ public class User {
     }
     
     
-    ////// 
-    /* Offer Cat Method !!
+  
+    //Offer Cat Method !!
     public void OfferCat(){
+        Scanner input = new Scanner(System.in);
 // Prompt the user to enter cat info :
         System.out.println("Enter cat information :(Note : You should enter it with this order : catId, catName, sex, age, breed, bound (Enter the name please), behavior, disabled, medicalHistory, likesCats, likesChildrens, adoptionState, adoptionReason, adoptionFees");
-      // Fill in cat info :
-      
+       // Fill in cat info :
          int catId = input.nextInt();
          String catName = input.next();
          String sex = input.next();
          int age = input.nextInt();
          String breed = input.next();
-         String catName = input.next();
-         Cat bound =  Searchbound(String catName);
+         String CatBoundName = input.next(); // Taking just that name to search for the cat object later.
          String behavior = input.next();
          boolean disabled = input.nextBoolean();
          String medicalHistory = input.next();
@@ -148,15 +146,18 @@ public class User {
          String adoptionState = input.next();
          String adoptionReason = input.next();
          int adoptionFees = input.nextInt();
-      
-     // Create Cat object : 
-      Cat newCat = new Cat(catId, catName, sex, age, breed, bound, behavior, disabled, medicalHistory, likesCats, likesChildrens, adoptionState, adoptionReason,adoptionFees);
-      
+         
+           // Create Cat object :
+       Cat newCat = new Cat(catId,catName, sex, age,breed,null,behavior,disabled,medicalHistory,likesCats,likesChildrens,adoptionState, adoptionReason, adoptionFees);
+        // Setting the cat’s bound after searching for it : 
+        newCat.setBound(newCat.Searchbound(CatBoundName));
       // Add it to the cats database ( Arraylist ) :
-        cat.addNewCattoDatabase(cat) ;
+        newCat.addNewCattoDatabase(newCat) ;
+     // Printing a message to the user :
+        System.out.println("Your Cat is added to the DataBase");
      
         
-    } Offer cat end here !! */
+    } //Offer cat end here !! 
 
 /* 
     //Donation method start here
