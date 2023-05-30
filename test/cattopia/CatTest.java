@@ -138,7 +138,7 @@ public class CatTest {
     @Test
     public void testSetAge() {
         System.out.println("setAge");
-        int age = 30;
+        int age = 3;
         Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
         instance.setAge(age);
         int expResult = 3;
@@ -193,10 +193,11 @@ public class CatTest {
     public void testSetBound() {
         System.out.println("setBound");
         Cat bound = null;
-        Cat instance = null;
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
         instance.setBound(bound);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Cat expResult = null;
+        Cat result = instance.getBound();
+        assertEquals(expResult, result);
     }
 
     /**
