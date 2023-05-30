@@ -141,21 +141,33 @@ public class User {
     public void OfferCat(){
         Scanner input = new Scanner(System.in);
 // Prompt the user to enter cat info :
-        System.out.println("Enter cat information :(Note : You should enter it with this order : catId, catName, sex, age, breed, bound (Enter the name please), behavior, disabled, medicalHistory, likesCats, likesChildrens, adoptionState, adoptionReason, adoptionFees");
-       // Fill in cat info :
+        System.out.println("Enter cat id: ");
          int catId = input.nextInt();
+        System.out.println("Enter cat name: "); 
          String catName = input.next();
+        System.out.println("Enter cat sex: "); 
          String sex = input.next();
+        System.out.println("Enter cat age: "); 
          int age = input.nextInt();
+        System.out.println("Enter cat breed: "); 
          String breed = input.next();
+        System.out.println("Enter cat Bound name: "); 
          String CatBoundName = input.next(); // Taking just that name to search for the cat object later.
+        System.out.println("Enter cat behavior: "); 
          String behavior = input.next();
+        System.out.println("is the cat disabled: "); 
          boolean disabled = input.nextBoolean();
+        System.out.println("Enter cat medical history: "); 
          String medicalHistory = input.next();
+        System.out.println("is the cat like other cats: ");
          boolean likesCats = input.nextBoolean();
+        System.out.println("is the cat like Childrens: "); 
          boolean likesChildrens = input.nextBoolean();
+        System.out.println("Enter cat adoption State: "); 
          String adoptionState = input.next();
+        System.out.println("Enter cat adoption Reason: "); 
          String adoptionReason = input.next();
+        System.out.println("Enter cat adoption Fees: ");  
          int adoptionFees = input.nextInt();
          
            // Create Cat object :
@@ -180,12 +192,16 @@ public class User {
         String DonationType = input.next();
         String DonationDate = input.next();
         if(DonationType.equalsIgnoreCase("Food donation")){
-            System.out.println("Enter the food information in this order: Brand name, Exp date as (dd/mm/yyyy), Manufec date as (dd/mm/yyyy), size.");
-        //Fill food infrmation    
+            //Fill food infrmation    
+            System.out.println("Enter Brand name: ");
             String BrandName = input.next();
+            System.out.println("Enter Exp date as (dd/mm/yyyy),: ");
             String ExpDate = input.next();
+            System.out.println("Enter Manufec date as (dd/mm/yyyy),: ");
             String ManufecDate = input.next();
+            System.out.println("Enter size: ");
             String size = input.next();
+
             System.out.println("The brand of the food:"+BrandName+"/nThe food Exp date:"+ExpDate+"/nThe food Manufec date:"+ManufecDate+"/nThe food size:"+size);
         }
         if(DonationType.equalsIgnoreCase("Money donation")){

@@ -44,8 +44,8 @@ public class CatTopia {
                   account.setName(input.next());
                   account.setLocation(input.next());
                   account.setContactInfo(input.next());
-//                  account.setHasCat(input.next());              //Unable to make it accept boolean
-//                  account.setHasChildren(input.next());
+                  account.setHasCat(input.nextBoolean());              
+                  account.setHasChildren(input.nextBoolean());
                   accounts.add(account);
 
               }else if (command.equalsIgnoreCase("Add_Cat")) {
