@@ -44,7 +44,7 @@ public class CatTest {
     @Test
     public void testGetCatId() {
         System.out.println("getCatId");
-        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"non",true,true,"for adoption", "", 25);
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
         int expResult = 123;
         int result = instance.getCatId();
         assertEquals(expResult, result);
@@ -58,7 +58,7 @@ public class CatTest {
     public void testSetCatId() {
         System.out.println("setCatId");
         int catId = 122;
-        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"non",true,true,"for adoption", "", 25);
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
         instance.setCatId(catId);
         int expResult = 122;
         int result = instance.getCatId();
@@ -71,7 +71,7 @@ public class CatTest {
     @Test
     public void testGetCatName() {
         System.out.println("getCatName");
-        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"non",true,true,"for adoption", "", 25);
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
         String expResult = "tommy";
         String result = instance.getCatName();
         assertEquals(expResult, result);
@@ -85,7 +85,7 @@ public class CatTest {
     public void testSetCatName() {
         System.out.println("setCatName");
         String catName = "lala";
-        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"non",true,true,"for adoption", "", 25);
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
         instance.setCatName(catName);
         String expResult = "lala";
         String result = instance.getCatName();
@@ -98,12 +98,11 @@ public class CatTest {
     @Test
     public void testGetSex() {
         System.out.println("getSex");
-        Cat instance = null;
-        String expResult = "";
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
+        String expResult = "male";
         String result = instance.getSex();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -112,11 +111,12 @@ public class CatTest {
     @Test
     public void testSetSex() {
         System.out.println("setSex");
-        String sex = "";
-        Cat instance = null;
+        String sex = "female";
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
         instance.setSex(sex);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String expResult = "female";
+        String result = instance.getSex();
+        assertEquals(expResult, result);
     }
 
     /**
@@ -125,12 +125,11 @@ public class CatTest {
     @Test
     public void testGetAge() {
         System.out.println("getAge");
-        Cat instance = null;
-        int expResult = 0;
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
+        int expResult = 2;
         int result = instance.getAge();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -139,11 +138,12 @@ public class CatTest {
     @Test
     public void testSetAge() {
         System.out.println("setAge");
-        int age = 0;
-        Cat instance = null;
+        int age = 30;
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
         instance.setAge(age);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int expResult = 3;
+        int result = instance.getAge();
+        assertEquals(expResult, result);
     }
 
     /**
@@ -152,12 +152,11 @@ public class CatTest {
     @Test
     public void testGetBreed() {
         System.out.println("getBreed");
-        Cat instance = null;
-        String expResult = "";
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
+        String expResult = "sphynx";
         String result = instance.getBreed();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -166,11 +165,12 @@ public class CatTest {
     @Test
     public void testSetBreed() {
         System.out.println("setBreed");
-        String breed = "";
-        Cat instance = null;
+        String breed = "exotic";
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
         instance.setBreed(breed);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String expResult = "exotic";
+        String result = instance.getBreed();
+        assertEquals(expResult, result);
     }
 
     /**
@@ -179,12 +179,11 @@ public class CatTest {
     @Test
     public void testGetBound() {
         System.out.println("getBound");
-        Cat instance = null;
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
         Cat expResult = null;
         Cat result = instance.getBound();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -206,12 +205,11 @@ public class CatTest {
     @Test
     public void testGetBehavior() {
         System.out.println("getBehavior");
-        Cat instance = null;
-        String expResult = "";
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
+        String expResult = "active";
         String result = instance.getBehavior();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -220,11 +218,12 @@ public class CatTest {
     @Test
     public void testSetBehavior() {
         System.out.println("setBehavior");
-        String behavior = "";
-        Cat instance = null;
+        String behavior = "playful";
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
         instance.setBehavior(behavior);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String expResult = "playful";
+        String result = instance.getBehavior();
+        assertEquals(expResult, result);
     }
 
     /**
@@ -233,12 +232,11 @@ public class CatTest {
     @Test
     public void testIsDisabled() {
         System.out.println("isDisabled");
-        Cat instance = null;
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
         boolean expResult = false;
         boolean result = instance.isDisabled();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -247,11 +245,12 @@ public class CatTest {
     @Test
     public void testSetDisabled() {
         System.out.println("setDisabled");
-        boolean disabled = false;
-        Cat instance = null;
+        boolean disabled = true;
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
         instance.setDisabled(disabled);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        boolean expResult = true;
+        boolean result = instance.isDisabled();
+        assertEquals(expResult, result);
     }
 
     /**
@@ -260,12 +259,11 @@ public class CatTest {
     @Test
     public void testGetMedicalHistory() {
         System.out.println("getMedicalHistory");
-        Cat instance = null;
-        String expResult = "";
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
+        String expResult = "none";
         String result = instance.getMedicalHistory();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -274,11 +272,12 @@ public class CatTest {
     @Test
     public void testSetMedicalHistory() {
         System.out.println("setMedicalHistory");
-        String medicalHistory = "";
-        Cat instance = null;
+        String medicalHistory = "allergic to milk";
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
         instance.setMedicalHistory(medicalHistory);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String expResult = "allergic to milk";
+        String result = instance.getMedicalHistory();
+        assertEquals(expResult, result);
     }
 
     /**
@@ -287,12 +286,11 @@ public class CatTest {
     @Test
     public void testIsLikesCats() {
         System.out.println("isLikesCats");
-        Cat instance = null;
-        boolean expResult = false;
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
+        boolean expResult = true;
         boolean result = instance.isLikesCats();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -302,10 +300,11 @@ public class CatTest {
     public void testSetLikesCats() {
         System.out.println("setLikesCats");
         boolean likesCats = false;
-        Cat instance = null;
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
         instance.setLikesCats(likesCats);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        boolean expResult = false;
+        boolean result = instance.isLikesCats();
+        assertEquals(expResult, result);
     }
 
     /**
@@ -314,12 +313,11 @@ public class CatTest {
     @Test
     public void testIsLikesChildrens() {
         System.out.println("isLikesChildrens");
-        Cat instance = null;
-        boolean expResult = false;
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
+        boolean expResult = true;
         boolean result = instance.isLikesChildrens();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -329,10 +327,11 @@ public class CatTest {
     public void testSetLikesChildrens() {
         System.out.println("setLikesChildrens");
         boolean likesChildrens = false;
-        Cat instance = null;
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
         instance.setLikesChildrens(likesChildrens);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        boolean expResult = false;
+        boolean result = instance.isLikesChildrens();
+        assertEquals(expResult, result);
     }
 
     /**
@@ -341,12 +340,11 @@ public class CatTest {
     @Test
     public void testGetAdoptionState() {
         System.out.println("getAdoptionState");
-        Cat instance = null;
-        String expResult = "";
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
+        String expResult = "for adoption";
         String result = instance.getAdoptionState();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -355,11 +353,12 @@ public class CatTest {
     @Test
     public void testSetAdoptionState() {
         System.out.println("setAdoptionState");
-        String adoptionState = "";
-        Cat instance = null;
+        String adoptionState = "adopted";
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "", 25);
         instance.setAdoptionState(adoptionState);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String expResult = "adopted";
+        String result = instance.getAdoptionState();
+        assertEquals(expResult, result);
     }
 
     /**
@@ -368,12 +367,11 @@ public class CatTest {
     @Test
     public void testGetAdoptionReason() {
         System.out.println("getAdoptionReason");
-        Cat instance = null;
-        String expResult = "";
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "young", 25);
+        String expResult = "young";
         String result = instance.getAdoptionReason();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -382,11 +380,12 @@ public class CatTest {
     @Test
     public void testSetAdoptionReason() {
         System.out.println("setAdoptionReason");
-        String adoptionReason = "";
-        Cat instance = null;
+        String adoptionReason = "too old";
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "young", 25);
         instance.setAdoptionReason(adoptionReason);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String expResult = "too old";
+        String result = instance.getAdoptionReason();
+        assertEquals(expResult, result);
     }
 
     /**
@@ -422,12 +421,11 @@ public class CatTest {
     @Test
     public void testGetAdoptionFees() {
         System.out.println("getAdoptionFees");
-        Cat instance = null;
-        int expResult = 0;
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "young", 25);
+        int expResult = 25;
         int result = instance.getAdoptionFees();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -436,11 +434,12 @@ public class CatTest {
     @Test
     public void testSetAdoptionFees() {
         System.out.println("setAdoptionFees");
-        int adoptionFees = 0;
-        Cat instance = null;
+        int adoptionFees = 20;
+        Cat instance = new Cat(123,"tommy", "male", 2,"sphynx",null,"active",false,"none",true,true,"for adoption", "young", 25);
         instance.setAdoptionFees(adoptionFees);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int expResult = 20;
+        int result = instance.getAdoptionFees();
+        assertEquals(expResult, result);
     }
 
     /**
