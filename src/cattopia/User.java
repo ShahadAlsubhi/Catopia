@@ -20,6 +20,13 @@ public class User {
         this.DonateTo = DonateTo;
     }
 
+    public User(String UserID, String Name, String Location, String ContactInfo) {
+        this.UserID = UserID;
+        this.Name = Name;
+        this.Location = Location;
+        this.ContactInfo = ContactInfo;
+    }
+    
     public User() {
     }
     
@@ -98,6 +105,7 @@ public class User {
                     System.out.println("sorry! this timing is already reserved. please pick another one.");
                 }
                 else{
+                    
                 
                       ((Shelter)owner).getReservedAppointment().add(timeChoice);
                 
