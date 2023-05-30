@@ -37,9 +37,15 @@ public class CatTopia {
           do { // Reading the commands
             command = input.next();
               if (command.equalsIgnoreCase("Add_Account_Indi")) {
-                  
-                  
-                  
+                  Individual account = new Individual();
+                  account.setUserID(input.next());
+                  account.setName(input.next());
+                  account.setLocation(input.next());
+                  account.setContactInfo(input.next());
+//                  account.setHasCat(input.next());              //Unable to make it accept boolean
+//                  account.setHasChildren(input.next());
+                  accounts.add(account);
+
               
               }else if (command.equalsIgnoreCase("Add_Cat")) {
         
