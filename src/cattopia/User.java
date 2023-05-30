@@ -209,4 +209,48 @@ public class User {
     }
     
     //Donation method end here
+    
+     public static void FilterCats(){
+        System.out.println("filter cats by: "
+                + "1-Breed  2-Age  3-Gender  4-behavior"
+                + "5-Disabled  6-Likes children  7-Likes cats");
+        Scanner input = new Scanner(System.in);
+        int Uchoice=input.nextInt();
+        
+        switch(Uchoice){
+            case 1:
+                System.out.println("what breed do you want to display ? ");
+                String breed=input.next();
+                Cat.FilterByBreed(breed);
+                break;
+            case 2:
+                System.out.println("what age do you want to display ? ");
+                int age=input.nextInt();
+                Cat.FilterByAge(age);
+                break;
+            case 3:
+                System.out.println("what gender do you want to display ? ");
+                String gender=input.next();
+                Cat.FilterByGender(gender);
+                break;
+            case 4:
+                System.out.println("what behavior do you to display ? ");
+                String behavior=input.next();
+                Cat.FilterByBehavior(behavior);
+                break;
+            case 5: 
+                Cat.FilterDisabled();
+                break;
+            case 6:
+                Cat.FilterLikesChildren();
+                break;
+            case 7:
+                Cat.FilterLikesCats();
+                break;
+            default :
+                System.out.println("invalid choice ");
+                break;  
+        }
+    }
+     
 }
