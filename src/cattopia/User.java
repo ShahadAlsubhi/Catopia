@@ -171,8 +171,11 @@ public class User {
     
     public static void donate(){
         System.out.println("What type of donation will you make?/nFood donation/nMoney donation/nToys donation");
+        System.out.println("When will you donate?(please enter the date in this form dd/mm/yyyy)");
         Scanner input = new Scanner(System.in);
+        //Fill donation information
         String DonationType = input.next();
+        String DonationDate = input.next();
         if(DonationType.equalsIgnoreCase("Food donation")){
             System.out.println("Enter the food information in this order: Brand name, Exp date as (dd/mm/yyyy), Manufec date as (dd/mm/yyyy), size.");
         //Fill food infrmation    
