@@ -29,7 +29,9 @@ public class CatTopia {
             System.exit(0);
         }
         
-        Scanner input = new Scanner(inputData); //Scanner to read input
+        Scanner input = new Scanner(inputData); //Scanner to read input Database
+          Scanner inputUser = new Scanner(System.in); //Scanner to read input
+        
         String command = null;
    
         System.out.println("Loading database. . .");
@@ -46,7 +48,6 @@ public class CatTopia {
 //                  account.setHasChildren(input.next());
                   accounts.add(account);
 
-              
               }else if (command.equalsIgnoreCase("Add_Cat")) {
         
               
@@ -59,8 +60,33 @@ public class CatTopia {
  
 
         } while (!command.equalsIgnoreCase("Quit"));
-        
+              command = null;
            System.out.println("--------------- Welcome to Catopia System ---------------");
+           System.out.println("1. Adopt a Cat");
+            System.out.println("2.Offer a cat for adoption");
+            System.out.println("3. Filter avaible Cats");
+            System.out.println("4. Donate to a Shelter");
+            System.out.println("5. Donate to a Shelter");
+           System.out.println("Please Enter your Choice: ");
+           
+           do { // Reading the commands
+            command = inputUser.next();
+              if (command.equalsIgnoreCase("1")) {
+                 
+
+              
+              }else if (command.equalsIgnoreCase("2")) {
+        
+              
+            }
+                else if (command.equalsIgnoreCase("3")) {
+        
+              
+            }
+
+ 
+
+        } while (!command.equalsIgnoreCase("5"));
            
            
     }
