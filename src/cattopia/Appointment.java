@@ -5,24 +5,24 @@ import java.util.*;
 
 
 public class Appointment {
-   private Date Date;
+   private String Date;
    private String NewOwnerID;
    private String OldOwnerID;
    private String catID;
    private String State;
 
-    public Appointment(Date Date, String NewOwnerID, String OldOwnerID, String State) {
+    public Appointment(String Date, String NewOwnerID, String OldOwnerID, String State) {
         this.Date = Date;
         this.NewOwnerID = NewOwnerID;
         this.OldOwnerID = OldOwnerID;
         this.State = State;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return Date;
     }
 
-    public void setDate(Date Date) {
+    public void setDate(String Date) {
         this.Date = Date;
     }
 

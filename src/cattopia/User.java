@@ -97,20 +97,23 @@ public class User {
             } else { //if the the user is adopting from a shelter
 
                 System.out.println("please enter a time for the meeting and make sure it is written like this yyyy/mm/dd 00:00PM/AM: ");
+                
       
                 // scanner for user input
                 String timeChoice = input.next();
-                if (((Shelter)owner).getReservedAppointment().contains(timeChoice)){
+                if (((Shelter)owner).searchAppointment(timeChoice) == null ){
+                    Appointment app = new Appointment( timeChoice, user.getUserID(), owner.getUserID(), "Pending");
                 
-                    System.out.println("sorry! this timing is already reserved. please pick another one.");
+                       ((Shelter)owner).getReservedAppointment().add(app);
+                       
+                System.out.println("You have succesfully made an apponitment with this shelter!");
+                cat.setAdoptionState("Pending"); // set cat's adoption state
                 }
                 else{
                     
-                
-                      ((Shelter)owner).getReservedAppointment().add(timeChoice);
-                
-                System.out.println("You have succesfully made an apponitment with this shelter!");
-                cat.setAdoptionState("Pending"); // set cat's adoption state
+                      System.out.println("sorry! this timing is already reserved. please pick another one.");
+                 
+ 
                 
                 }
                 

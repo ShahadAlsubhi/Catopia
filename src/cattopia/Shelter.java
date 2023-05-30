@@ -15,9 +15,9 @@ public class Shelter extends User{
     private String ShelterName;
     private boolean Verification;
     private ArrayList<String> RecievedDonation;
-    private ArrayList<String> ReservedAppointment;
+    private ArrayList<Appointment> ReservedAppointment;
 
-    public Shelter(String ShelterName, boolean Verification, ArrayList<String> RecievedDonation, ArrayList<String> ReservedAppointment) {
+    public Shelter(String ShelterName, boolean Verification, ArrayList<String> RecievedDonation, ArrayList<Appointment> ReservedAppointment) {
         this.ShelterName = ShelterName;
         this.Verification = Verification;
         this.RecievedDonation = RecievedDonation;
@@ -39,7 +39,7 @@ public class Shelter extends User{
         return RecievedDonation;
     }
 
-    public ArrayList<String> getReservedAppointment() {
+    public ArrayList<Appointment> getReservedAppointment() {
         return ReservedAppointment;
     }
 
@@ -55,12 +55,19 @@ public class Shelter extends User{
         this.RecievedDonation = RecievedDonation;
     }
 
-    public void setReservedAppointment(ArrayList<String> ReservedAppointment) {
+    public void setReservedAppointment(ArrayList<Appointment> ReservedAppointment) {
         this.ReservedAppointment = ReservedAppointment;
     }
     
   
-     
+     public Appointment searchAppointment(String date){
+  for (int i = 0; i < ReservedAppointment.size(); i++){
+      if (ReservedAppointment.get(i).getDate().equalsIgnoreCase(date))
+          return ReservedAppointment.get(i);
+  }
+  return null;
+     }
+   
   
     
 
