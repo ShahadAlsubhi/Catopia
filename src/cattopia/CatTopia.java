@@ -48,11 +48,33 @@ public class CatTopia {
                   account.setHasChildren(input.nextBoolean());
                   accounts.add(account);
 
-              }else if (command.equalsIgnoreCase("Add_Cat")) {
-        
+              }else if (command.equalsIgnoreCase("Add_Cat")) { 
+                  Cat cat = new Cat();
+                  cat.setCatId(input.nextInt());
+                  cat.setCatName(input.next());
+                  cat.setSex(input.next());
+                  cat.setAge(input.nextInt());
+                  cat.setBreed(input.next());
+//                  cat.setBound(input.next());???????????????????
+                  cat.setBehavior(input.next());
+                  cat.setDisabled(input.nextBoolean());
+                  cat.setMedicalHistory(input.next());
+                  cat.setLikesCats(input.nextBoolean());
+                  cat.setLikesChildrens(input.nextBoolean());
+                  cat.setAdoptionState(input.next());
+                  cat.setAdoptionReason(input.next());
+//                  cat.setAdoptionUpdates();?????????????????????
+                  cat.setAdoptionFees(input.nextInt());
+                  cat.addNewCattoDatabase(cat);
               
             }
                 else if (command.equalsIgnoreCase("Add_Account_Shelter")) {
+                  Shelter account = new Shelter();
+                  account.setShelterName(input.next());
+                  account.setVerification(input.nextBoolean());
+//                  account.setRecievedDonation(?????);
+//                  account.setReservedAppointment(??????);
+                  accounts.add(account);
         
               
             }
@@ -66,23 +88,30 @@ public class CatTopia {
             System.out.println("2.Offer a cat for adoption");
             System.out.println("3. Filter avaible Cats");
             System.out.println("4. Donate to a Shelter");
-            System.out.println("5. Donate to a Shelter");
+            System.out.println("5. Quit");
            System.out.println("Please Enter your Choice: ");
            
            do { // Reading the commands
             command = inputUser.next();
               if (command.equalsIgnoreCase("1")) {
-                 
+              
 
               
               }else if (command.equalsIgnoreCase("2")) {
+                  accounts.get(0).OfferCat();
         
               
             }
                 else if (command.equalsIgnoreCase("3")) {
+                    accounts.get(0).FilterCats();
         
               
             }
+                else if (command.equalsIgnoreCase("4")) {
+                    accounts.get(0).donate();
+        
+              
+            }  
 
  
 
