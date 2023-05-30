@@ -4,15 +4,15 @@ import java.util.*;
 
 public class FoodDonation extends Donation{
     private String BrandName;
-    private Date ExpDate;
-    private Date ManufecDate;
+    private String ExpDate;
+    private String ManufecDate;
     private String Size;
 
     public FoodDonation(Donation DonationType, Date DonationDate, String UserID, String ShelterID) {
         super(DonationType, DonationDate, UserID, ShelterID);
     }
 
-    public FoodDonation(String BrandName, Date ExpDate, Date ManufecDate, String Size, Donation DonationType, Date DonationDate, String UserID, String ShelterID) {
+    public FoodDonation(String BrandName, String ExpDate, String ManufecDate, String Size, Donation DonationType, Date DonationDate, String UserID, String ShelterID) {
         super(DonationType, DonationDate, UserID, ShelterID);
         this.BrandName = BrandName;
         this.ExpDate = ExpDate;
@@ -28,19 +28,19 @@ public class FoodDonation extends Donation{
         this.BrandName = BrandName;
     }
 
-    public Date getExpDate() {
+    public String getExpDate() {
         return ExpDate;
     }
 
-    public void setExpDate(Date ExpDate) {
+    public void setExpDate(String ExpDate) {
         this.ExpDate = ExpDate;
     }
 
-    public Date getManufecDate() {
+    public String getManufecDate() {
         return ManufecDate;
     }
 
-    public void setManufecDate(Date ManufecDate) {
+    public void setManufecDate(String ManufecDate) {
         this.ManufecDate = ManufecDate;
     }
 

@@ -159,7 +159,6 @@ public class User {
         
     } //Offer cat end here !! 
 
-/* 
     //Donation method start here
     
     public static void donate(){
@@ -168,6 +167,7 @@ public class User {
         String DonationType = input.next();
         if(DonationType.equalsIgnoreCase("Food donation")){
             System.out.println("Enter the food information in this order: Brand name, Exp date as (dd/mm/yyyy), Manufec date as (dd/mm/yyyy), size.");
+        //Fill food infrmation    
             String BrandName = input.next();
             String ExpDate = input.next();
             String ManufecDate = input.next();
@@ -186,6 +186,7 @@ public class User {
         }
         if(DonationType.equalsIgnoreCase("Toys donation")){
             System.out.println("What size and condition of toys will you donate?");
+        //Fill toy infrmation    
             String condition = input.next();
             String size = input.next();
             System.out.println("The size of the toy: "+size+"/nThe condition of the toy: "+condition);
@@ -194,5 +195,4 @@ public class User {
     }
     
     //Donation method end here
-    */
 }

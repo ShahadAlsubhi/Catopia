@@ -35,7 +35,7 @@ public class Cat {
         this.likesChildrens = likesChildrens;
         this.adoptionState = adoptionState;
         this.adoptionReason = adoptionReason;
-//        this.adoptionUpdates = adoptionUpdates;
+        this.adoptionUpdates = adoptionUpdates;
         this.adoptionFees = adoptionFees;
     }
 
