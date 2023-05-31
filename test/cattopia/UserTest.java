@@ -179,10 +179,11 @@ public class UserTest {
     public void testSetOwenedCats() {
         System.out.println("setOwenedCats");
         ArrayList<String> OwenedCats = null;
-        User instance = new User();
+        User instance = new User("001","ahmed","Jeddah","0553498750", null, null);
         instance.setOwenedCats(OwenedCats);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        ArrayList<String> expResult = null;
+        ArrayList<String> result = instance.getOwenedCats();
+        assertEquals(expResult, result);
     }
 
     /**
@@ -192,10 +193,11 @@ public class UserTest {
     public void testSetDonateTo() {
         System.out.println("setDonateTo");
         ArrayList<String> DonateTo = null;
-        User instance = new User();
+        User instance = new User("001","ahmed","Jeddah","0553498750", null, null);
         instance.setDonateTo(DonateTo);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        ArrayList<String> expResult = null;
+        ArrayList<String> result = instance.getDonateTo();
+        assertEquals(expResult, result);
     }
 
     /**
