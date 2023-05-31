@@ -96,12 +96,11 @@ public class UserTest {
     @Test
     public void testGetOwenedCats() {
         System.out.println("getOwenedCats");
-        User instance = new User();
+        User instance = new User("001","ahmed","Jeddah","0553498750", null, null);
         ArrayList<String> expResult = null;
         ArrayList<String> result = instance.getOwenedCats();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      
     }
 
     /**
@@ -110,12 +109,11 @@ public class UserTest {
     @Test
     public void testGetDonateTo() {
         System.out.println("getDonateTo");
-        User instance = new User();
+        User instance = new User("001","ahmed","Jeddah","0553498750", null, null);
         ArrayList<String> expResult = null;
         ArrayList<String> result = instance.getDonateTo();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+ 
     }
 
     /**
