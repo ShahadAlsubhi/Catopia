@@ -22,8 +22,8 @@ public class CatTopia {
         ArrayList<User> accounts = new  ArrayList<User>();
         ArrayList<Cat> cats = new  ArrayList<Cat>();
         
-     
-
+        addCats(cats); //add cats to the array
+        
         if (!inputData.exists()) {    //check if the file exists
             System.out.print("the file " + inputData.getName() + " is not found\n Check in " + inputData.getAbsolutePath());
             System.exit(0);
@@ -94,8 +94,17 @@ public class CatTopia {
            do { // Reading the commands
             command = inputUser.next();
               if (command.equalsIgnoreCase("1")) {
-              
-
+                  System.out.println("the available cats : ");
+                  
+                  for(int i=0;i<cats.size();i++){
+                      System.out.println(cats.get(i));
+                      System.out.println("---------------------------------------------------------------------");
+                  }
+                  
+                  System.out.println("enter the cat ID you would like to adopt : ");
+                  int CatID=input.nextInt();
+                  //accounts.get(0).adoptionReq(cats.get(CatID-1),accounts.get(0),);
+                  
               
               }else if (command.equalsIgnoreCase("2")) {
                   accounts.get(0).OfferCat();
@@ -118,6 +127,16 @@ public class CatTopia {
         } while (!command.equalsIgnoreCase("5"));
            
            
+    }
+    
+    public static void addCats(ArrayList<Cat> cats){
+        
+        cats.add(new Cat(1,"toomy","male",2,"abyssinian",null,"friendly",false,"medical",false,true,"for adoptuin","so many cats",20));
+        cats.add(new Cat(2,"lucy","female",4,"bengal",null,"relaxed",false,"medical",true,false,"for adoptuin","to save money",25));
+        cats.add(new Cat(3,"luna","female",3,"bengal",null,"playful",true,"medical",true,true,"for adoptuin","so many cats",30));
+        cats.add(new Cat(4,"charlie","male",1,"birman",null,"relaxed",true,"medical",true,true,"for adoptuin","so young",20));
+        cats.add(new Cat(5,"bella","female",4,"bombay",null,"playful",false,"medical",false,false,"for adoptuin","too old",25));
+        
     }
     
 }

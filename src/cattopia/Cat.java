@@ -21,7 +21,7 @@ public class Cat {
     private int adoptionFees;
     public static ArrayList<Cat> cats;
 
-    public Cat(int catId, String catName, String sex, int age, String breed, Cat bound, String behavior, boolean disabled, String medicalHistory, boolean likesCats, boolean likesChildrens, String adoptionState, String adoptionReason, int adoptionFees) {
+    public Cat(int catId, String catName, String sex, int age, String breed,Cat bound,  String behavior, boolean disabled, String medicalHistory, boolean likesCats, boolean likesChildrens, String adoptionState, String adoptionReason, int adoptionFees) {
         this.catId = catId;
         this.catName = catName;
         this.sex = sex;
@@ -253,4 +253,13 @@ public class Cat {
       public void addNewCattoDatabase(Cat cat){
         cats.add(cat) ;
       }
+       public String toString() {
+           return "ID : "+catId+" cat name :"+catName+" gender : "+sex+" age : "
+                   +age+"\n breed : "+breed+" bound : "+bound+" behavior : "+
+                   behavior+"\n disabled : "+disabled+" medical history : "+
+                   medicalHistory+"\n likes cats : "+likesCats+" likes childrend :"
+                   +likesChildrens+"\n adoption state : "+adoptionState+
+                   "\n adoption reason : "+adoptionReason+" adoption fees : "+
+                   adoptionFees;
+       }
 }
