@@ -104,7 +104,7 @@ public class CatTopia {
                   System.out.println("enter the cat ID you would like to adopt : ");
                   int CatID=input.nextInt();
                   //accounts.get(0).adoptionReq(cats.get(CatID-1),accounts.get(0),);
-                  
+                  cats.get(CatID).setAdoptionState("unavailable");
               
               }else if (command.equalsIgnoreCase("2")) {
                   accounts.get(0).OfferCat();
@@ -131,12 +131,14 @@ public class CatTopia {
     
     public static void addCats(ArrayList<Cat> cats){
         
-        cats.add(new Cat(1,"toomy","male",2,"abyssinian",null,"friendly",false,"medical",false,true,"for adoptuin","so many cats",20));
-        cats.add(new Cat(2,"lucy","female",4,"bengal",null,"relaxed",false,"medical",true,false,"for adoptuin","to save money",25));
-        cats.add(new Cat(3,"luna","female",3,"bengal",null,"playful",true,"medical",true,true,"for adoptuin","so many cats",30));
-        cats.add(new Cat(4,"charlie","male",1,"birman",null,"relaxed",true,"medical",true,true,"for adoptuin","so young",20));
-        cats.add(new Cat(5,"bella","female",4,"bombay",null,"playful",false,"medical",false,false,"for adoptuin","too old",25));
+        cats.add(new Cat(1,"1","toomy","male",2,"abyssinian",null,"friendly",false,"medical",false,true,"for adoptuin","so many cats",null,20));
+        cats.add(new Cat(2,"2","lucy","female",4,"bengal",null,"relaxed",false,"medical",true,false,"for adoptuin","to save money",null,25));
+        cats.add(new Cat(3,"3","luna","female",3,"bengal",null,"playful",true,"medical",true,true,"for adoptuin","so many cats",null,30));
+        cats.add(new Cat(4,"4","charlie","male",1,"birman",null,"relaxed",true,"medical",true,true,"for adoptuin","so young",null,20));
+        cats.add(new Cat(5,"5","bella","female",4,"bombay",null,"playful",false,"medical",false,false,"for adoptuin","too old",null,25));
         
     }
+    
+   
     
 }

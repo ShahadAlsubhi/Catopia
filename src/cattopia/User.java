@@ -143,6 +143,8 @@ public class User {
 // Prompt the user to enter cat info :
         System.out.println("Enter cat id: ");
          int catId = input.nextInt();
+         System.out.println("Enter owner id: ");
+         String ownerId = input.next();
         System.out.println("Enter cat name: "); 
          String catName = input.next();
         System.out.println("Enter cat sex: "); 
@@ -171,7 +173,7 @@ public class User {
          int adoptionFees = input.nextInt();
          
            // Create Cat object :
-       Cat newCat = new Cat(catId,catName, sex, age,breed,null,behavior,disabled,medicalHistory,likesCats,likesChildrens,adoptionState, adoptionReason, adoptionFees);
+       Cat newCat = new Cat(catId,ownerId,catName, sex, age,breed,null,behavior,disabled,medicalHistory,likesCats,likesChildrens,adoptionState, adoptionReason,null, adoptionFees);
         // Setting the cat’s bound after searching for it : 
         newCat.setBound(newCat.Searchbound(CatBoundName));
       // Add it to the cats database ( Arraylist ) :
@@ -237,31 +239,59 @@ public class User {
             case 1:
                 System.out.println("what breed do you want to display ? ");
                 String breed=input.next();
-                Cat.FilterByBreed(breed);
+                ArrayList Filtered1=Cat.FilterByBreed(breed);
+                 for(int i=0;i<Filtered1.size();i++){
+                      System.out.println(Filtered1.get(i));
+                      System.out.println("---------------------------------------------------------------------");
+                  }
                 break;
             case 2:
                 System.out.println("what age do you want to display ? ");
                 int age=input.nextInt();
-                Cat.FilterByAge(age);
+                ArrayList Filtered2=Cat.FilterByAge(age);
+                 for(int i=0;i<Filtered2.size();i++){
+                      System.out.println(Filtered2.get(i));
+                      System.out.println("---------------------------------------------------------------------");
+                  }
                 break;
             case 3:
                 System.out.println("what gender do you want to display ? ");
                 String gender=input.next();
-                Cat.FilterByGender(gender);
+                ArrayList Filtered3=Cat.FilterByGender(gender);
+                 for(int i=0;i<Filtered3.size();i++){
+                      System.out.println(Filtered3.get(i));
+                      System.out.println("---------------------------------------------------------------------");
+                  }
                 break;
             case 4:
                 System.out.println("what behavior do you to display ? ");
                 String behavior=input.next();
-                Cat.FilterByBehavior(behavior);
+                ArrayList Filtered4=Cat.FilterByBehavior(behavior);
+                 for(int i=0;i<Filtered4.size();i++){
+                      System.out.println(Filtered4.get(i));
+                      System.out.println("---------------------------------------------------------------------");
+                  }
                 break;
             case 5: 
-                Cat.FilterDisabled();
+                ArrayList Filtered5=Cat.FilterDisabled();
+                for(int i=0;i<Filtered5.size();i++){
+                      System.out.println(Filtered5.get(i));
+                      System.out.println("---------------------------------------------------------------------");
+                  }
                 break;
             case 6:
-                Cat.FilterLikesChildren();
+                ArrayList Filtered6=Cat.FilterLikesChildren();
+                 for(int i=0;i<Filtered6.size();i++){
+                      System.out.println(Filtered6.get(i));
+                      System.out.println("---------------------------------------------------------------------");
+                  }
                 break;
             case 7:
-                Cat.FilterLikesCats();
+                ArrayList Filtered7=Cat.FilterLikesCats();
+                 for(int i=0;i<Filtered7.size();i++){
+                      System.out.println(Filtered7.get(i));
+                      System.out.println("---------------------------------------------------------------------");
+                  }
                 break;
             default :
                 System.out.println("invalid choice ");
