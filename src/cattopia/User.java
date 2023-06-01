@@ -11,6 +11,7 @@ public class User {
     private ArrayList<String> OwenedCats;
     private ArrayList<String> DonateTo; 
 
+
     public User(String UserID, String Name, String Location, String ContactInfo, ArrayList<String> OwenedCats, ArrayList<String> DonateTo) {
         this.UserID = UserID;
         this.Name = Name;

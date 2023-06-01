@@ -139,6 +139,13 @@ public class CatTopia {
         
     }
     
-   
+    public User searchUser(String id,  ArrayList<User> accounts){
+              
+  for (int i = 0; i < accounts.size(); i++){
+      if (accounts.get(i).getUserID().equalsIgnoreCase(id))
+          return accounts.get(i);
+  }
+  return null;
+     }
     
 }
