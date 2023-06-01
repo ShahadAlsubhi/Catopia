@@ -5,6 +5,7 @@ import java.util.*;
 public class Cat {
     
     private int catId;
+    private String ownerId;
     private String catName;
     private String sex;
     private int age;
@@ -21,8 +22,9 @@ public class Cat {
     private int adoptionFees;
     public static ArrayList<Cat> cats;
 
-    public Cat(int catId, String catName, String sex, int age, String breed,Cat bound,  String behavior, boolean disabled, String medicalHistory, boolean likesCats, boolean likesChildrens, String adoptionState, String adoptionReason, int adoptionFees) {
+    public Cat(int catId, String ownerId, String catName, String sex, int age, String breed, Cat bound, String behavior, boolean disabled, String medicalHistory, boolean likesCats, boolean likesChildrens, String adoptionState, String adoptionReason, ArrayList<String> adoptionUpdates, int adoptionFees) {
         this.catId = catId;
+        this.ownerId = ownerId;
         this.catName = catName;
         this.sex = sex;
         this.age = age;
@@ -39,6 +41,8 @@ public class Cat {
         this.adoptionFees = adoptionFees;
     }
 
+
+
     Cat() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -49,6 +53,14 @@ public class Cat {
 
     public void setCatId(int catId) {
         this.catId = catId;
+    }
+
+    public String getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
     }
 
     public String getCatName() {
