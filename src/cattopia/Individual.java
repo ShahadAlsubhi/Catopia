@@ -7,6 +7,8 @@ import java.util.ArrayList;
 public class Individual extends User{
     private boolean hasCat;
     private boolean hasChildren;
+    
+    
 
     public Individual(boolean hasCat, boolean hasChildren, String UserID, String Name, String Location, String ContactInfo, ArrayList<String> OwenedCats, ArrayList<String> DonateTo) {
         super(UserID, Name, Location, ContactInfo, OwenedCats, DonateTo);
