@@ -108,7 +108,7 @@ public class CatTopia {
                   cats.get(CatID).setAdoptionState("unavailable");
               
               }else if (command.equalsIgnoreCase("2")) {
-                  accounts.get(0).OfferCat();
+                  accounts.get(0).OfferCat(cats);
         
               
             }

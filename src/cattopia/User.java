@@ -139,7 +139,7 @@ public class User {
     
   
     //Offer Cat Method !!
-    public void OfferCat(){
+    public void OfferCat(ArrayList<Cat> cats){
         Scanner input = new Scanner(System.in);
 // Prompt the user to enter cat info :
         System.out.println("Enter cat id: ");
@@ -174,11 +174,11 @@ public class User {
          int adoptionFees = input.nextInt();
          
            // Create Cat object :
-       Cat newCat = new Cat(catId,ownerId,catName, sex, age,breed,null,behavior,disabled,medicalHistory,likesCats,likesChildrens,adoptionState, adoptionReason,null, adoptionFees);
+       cats.add( new Cat(catId,ownerId,catName, sex, age,breed,null,behavior,disabled,medicalHistory,likesCats,likesChildrens,adoptionState, adoptionReason,null, adoptionFees));
         // Setting the cat’s bound after searching for it : 
-        newCat.setBound(newCat.Searchbound(CatBoundName));
+        cats.get(cats.size()-1).setBound(cats.get(cats.size()-1).Searchbound(CatBoundName));
       // Add it to the cats database ( Arraylist ) :
-        newCat.addNewCattoDatabase(newCat) ;
+        cats.get(cats.size()-1).addNewCattoDatabase(cats.get(cats.size()-1)) ;
      // Printing a message to the user :
         System.out.println("Your Cat is added to the DataBase");
      
