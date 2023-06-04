@@ -179,9 +179,9 @@ public class Cat {
     
     public static ArrayList<Cat> FilterByBreed(String breed,ArrayList<Cat> cats){
         ArrayList Filtered= new ArrayList();
-        for(Cat cat:cats){
-            if(cat.getBreed().equalsIgnoreCase(breed)){
-                Filtered.add(cat);
+        for(int i=0;i<cats.size();i++){
+            if(cats.get(i).getBreed().equalsIgnoreCase(breed)){
+                Filtered.add(cats.get(i));
             }
         }
         return Filtered;
@@ -209,9 +209,9 @@ public class Cat {
     
     public static ArrayList<Cat> FilterByBehavior(String behavior,ArrayList<Cat> cats){
         ArrayList Filtered = new ArrayList();
-        for(Cat cat:cats){
-            if(cat.getBehavior().equalsIgnoreCase(behavior)){
-                Filtered.add(cat);
+        for(int i=0;i<cats.size();i++){
+            if(cats.get(i).getBehavior().equalsIgnoreCase(behavior)){
+                Filtered.add(cats.get(i));
             }
         }
         return Filtered;
@@ -219,9 +219,9 @@ public class Cat {
     
     public static ArrayList<Cat> FilterDisabled(ArrayList<Cat> cats){
         ArrayList Filtered = new ArrayList();
-        for(Cat cat:cats){
-            if(cat.isDisabled()==true){
-                Filtered.add(cat);
+        for(int i=0;i<cats.size();i++){
+            if(cats.get(i).isDisabled()==true){
+                Filtered.add(cats.get(i));
             }
         }
         return Filtered;
@@ -229,9 +229,9 @@ public class Cat {
     
     public static ArrayList<Cat> FilterLikesChildren(ArrayList<Cat> cats){
         ArrayList Filtered = new ArrayList();
-        for(Cat cat:cats){
-            if(cat.isLikesChildrens()==true){
-                Filtered.add(cat);
+        for(int i=0;i<cats.size();i++){
+            if(cats.get(i).isLikesChildrens()==true){
+                Filtered.add(cats.get(i));
             }
         }
         return Filtered;
@@ -239,9 +239,9 @@ public class Cat {
     
     public static ArrayList<Cat> FilterLikesCats(ArrayList<Cat> cats){
          ArrayList Filtered = new ArrayList();
-        for(Cat cat:cats){
-            if(cat.isLikesCats()==true){
-                Filtered.add(cat);
+        for(int i=0;i<cats.size();i++){
+            if(cats.get(i).isLikesCats()==true){
+                Filtered.add(cats.get(i));
             }
         }
         return Filtered;
