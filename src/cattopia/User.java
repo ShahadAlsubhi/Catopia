@@ -231,7 +231,7 @@ public class User {
     
     //Donation method end here
     
-     public static void FilterCats(){
+     public static void FilterCats(ArrayList<Cat> cats){
         System.out.println("filter cats by: "
                 + "1-Breed  2-Age  3-Gender  4-behavior"
                 + "5-Disabled  6-Likes children  7-Likes cats");
@@ -260,7 +260,7 @@ public class User {
             case 3:
                 System.out.println("what gender do you want to display ? ");
                 String gender=input.next();
-                ArrayList<Cat> Filtered3=Cat.FilterByGender(gender);
+                ArrayList<Cat> Filtered3=Cat.FilterByGender(gender,cats);
                  for(int i=0;i<Filtered3.size();i++){
                       System.out.println(Filtered3.get(i));
                       System.out.println("---------------------------------------------------------------------");

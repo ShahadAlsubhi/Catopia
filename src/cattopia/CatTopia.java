@@ -55,7 +55,7 @@ public class CatTopia {
               
             }
                 else if (command.equalsIgnoreCase("3")) {
-                    accounts.get(0).FilterCats();
+                    accounts.get(0).FilterCats(cats);
         
               
             }
