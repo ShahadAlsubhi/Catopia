@@ -205,13 +205,13 @@ public class UserTest {
      */
     @Test
     public void testAdoptionReq() {
-        System.out.println("adoptionReq");
-        Cat cat = null;
-        Individual user = null;
-        User owner = null;
-        User.adoptionReq(cat, user, owner);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      System.out.println("adoptionReq");
+        Cat cat = new Cat(1,"001","toomy","male",2,"abyssinian",null,"friendly",false,"medical",false,true,"for adoptuin","so many cats",null,20);
+        Individual user = new Individual(true ,false, "2108759", "Asma", "Al-Rawda dt.", "0504899703", null , null);
+        User owner = new User("001","ahmed","Jeddah","0553498750", null, null);
+        String exp="0553498750";
+        String ContactInfo=owner.getContactInfo();
+        assertEquals(exp,ContactInfo);
     }
 
     /**
