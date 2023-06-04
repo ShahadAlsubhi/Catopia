@@ -1,15 +1,15 @@
 package cattopia;
 
 
-import java.util.*;
+import java.time.LocalDate;
 
 public class Donation {
     private Donation DonationType;
-    private Date DonationDate;
+    private LocalDate DonationDate;
     private String UserID;
     private String ShelterID;  
 
-    public Donation(Donation DonationType, Date DonationDate, String UserID, String ShelterID) {
+    public Donation(Donation DonationType, LocalDate DonationDate, String UserID, String ShelterID) {
         this.DonationType = DonationType;
         this.DonationDate = DonationDate;
         this.UserID = UserID;
@@ -24,11 +24,11 @@ public class Donation {
         this.DonationType = DonationType;
     }
 
-    public Date getDonationDate() {
+    public LocalDate getDonationDate() {
         return DonationDate;
     }
 
-    public void setDonationDate(Date DonationDate) {
+    public void setDonationDate(LocalDate DonationDate) {
         this.DonationDate = DonationDate;
     }
 
