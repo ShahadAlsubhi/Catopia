@@ -22,7 +22,24 @@ public class CatTopia {
         addCats(cats); //add cats to the array
         
           Scanner input = new Scanner(System.in); //Scanner to read input
-        
+                
+            // Defining and creating Individual object as adopter with some random data assigned to it : 
+            ArrayList<String> userOwnedCats = new ArrayList<>(); userOwnedCats.add("1");
+            ArrayList<String> userDonateTo =  new ArrayList<>() ; userDonateTo.add("Small Kittens shelter") ;
+            Individual individual =new Individual(true ,false, "2108759", "Asma", "Al-Rawda dt.", "0504899703", userOwnedCats , userDonateTo);
+            accounts.add(individual);
+            
+            // Defining and creating an Individual object as Owner with some random data assigned to it : 
+            ArrayList<String> OwnerOwnedCats = new ArrayList<>(); userOwnedCats.add("2");
+            Individual owner = new Individual(false ,false, "2108766", "Sarah", "Al-Jamaa dt.", "0501854703", OwnerOwnedCats , null);
+            accounts.add(owner);
+            
+            // Defining and creating Shelter object with some random data assigned to it : 
+            ArrayList<Appointment> ReservedAppointment = new ArrayList<>(); 
+            ReservedAppointment.add(new Appointment ("2002/07/23", "3", "8", " "));
+            Shelter shelter = new Shelter("Small Kittens shelter", true, null, ReservedAppointment);
+            accounts.add(shelter);
+            
         String command = null;
            
             System.out.println("--------------- Welcome to Catopia System ---------------");
@@ -31,8 +48,7 @@ public class CatTopia {
             System.out.println("3. Filter avaible Cats");
             System.out.println("4. Donate to a Shelter");
             System.out.println("5. Quit");
-           Individual user =new Individual();
-           accounts.add(user);
+            
            do { // Reading the commands
             System.out.println("Please Enter your Choice: ");
             command = input.next();
@@ -46,8 +62,9 @@ public class CatTopia {
                   
                   System.out.println("enter the cat ID you would like to adopt : ");
                   int CatID=input.nextInt();
-                  User.adoptionReq(cats.get(CatID-1),user,searchUser(cats.get(CatID-1).getOwnerId(),accounts));
-                  cats.get(CatID).setAdoptionState("unavailable");
+                  User.adoptionReq(cats.get(CatID-1),individual,shelter); // The adoption is from a shelter in this case.
+                  if("available".equals(cats.get(CatID-1).getAdoptionState()))
+                  cats.get(CatID-1).setAdoptionState("unavailable");
               
               }else if (command.equalsIgnoreCase("2")) {
                   accounts.get(0).OfferCat(cats);

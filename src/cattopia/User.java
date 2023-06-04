@@ -100,11 +100,10 @@ public class User {
                 System.out.println("These are the owner contatct info, please contact them to arrage adoption.\n" + ((Individual)owner).getContactInfo() );
                 cat.setAdoptionState("Pending"); // set cat's adoption state
 
-            } else { //if the the user is adopting from a shelter
+            } else if(owner instanceof Shelter) { //if the the user is adopting from a shelter
 
                 System.out.println("please enter a time for the meeting and make sure it is written like this yyyy/mm/dd 00:00PM/AM: ");
-                
-      
+
                 // scanner for user input
                 String timeChoice = input.next();
                 if (((Shelter)owner).searchAppointment(timeChoice) == null ){
