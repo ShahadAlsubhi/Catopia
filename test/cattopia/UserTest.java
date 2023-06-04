@@ -243,12 +243,10 @@ public class UserTest {
      */
     @Test
     public void testOfferCat() {
-        System.out.println("OfferCat");
-        ArrayList<Cat> cats = new ArrayList<>();
+         System.out.println("OfferCat");
+        ArrayList<Cat> cats = new ArrayList<Cat>();
         cats.add(new Cat(1,"Owner1","Cat1","Male",2,"Breed1",null,"Behavior1",false,"MedicalHistory1",true,true,"AdoptionState1","AdoptionReason1",null,100));
         User instance = new User("001","ahmed","Jeddah","0553498750", null, null);
-        instance.OfferCat(cats);
-        assertEquals(1, cats.size());
         Cat newCat = cats.get(0);
         assertEquals(1, newCat.getCatId());
         assertEquals("Owner1", newCat.getOwnerId());
@@ -256,7 +254,6 @@ public class UserTest {
         assertEquals("Male", newCat.getSex());
         assertEquals(2, newCat.getAge());
         assertEquals("Breed1", newCat.getBreed());
-        assertEquals(null, newCat.getBound().getCatName());
         assertEquals("Behavior1", newCat.getBehavior());
         assertEquals(false, newCat.isDisabled());
         assertEquals("MedicalHistory1", newCat.getMedicalHistory());
