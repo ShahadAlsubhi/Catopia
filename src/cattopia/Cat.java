@@ -199,9 +199,9 @@ public class Cat {
     
     public static ArrayList<Cat> FilterByGender(String gender){
         ArrayList Filtered= new ArrayList();
-        for(Cat cat:cats){
-            if(cat.getSex().equalsIgnoreCase(gender)){
-                Filtered.add(cat);
+        for(int i=0;i<cats.size();i++){
+            if(cats.get(i).getSex().equalsIgnoreCase(gender)){
+                Filtered.add(cats.get(i));
             }
         }
         return Filtered;
