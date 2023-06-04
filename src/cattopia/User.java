@@ -179,9 +179,11 @@ public class User {
          int adoptionFees = input.nextInt();
          
            // Create Cat object :
-       cats.add( new Cat(catId,ownerId,catName, sex, age,breed,null,behavior,disabled,medicalHistory,likesCats,likesChildrens,adoptionState, adoptionReason,null, adoptionFees));
+           Cat newCat = new Cat(catId,ownerId,catName, sex, age,breed,null,behavior,disabled,medicalHistory,likesCats,likesChildrens,adoptionState, adoptionReason,null, adoptionFees);
+           cats.add(newCat);
         // Setting the cat’s bound after searching for it : 
-        cats.get(cats.size()-1).setBound(cats.get(cats.size()-1).Searchbound(CatBoundName,cats));
+        Cat objectBound = newCat.Searchbound(CatBoundName,cats) ;
+        cats.get(cats.size()-1).setBound(objectBound);
       // Add it to the cats database ( Arraylist ) :
         cats.get(cats.size()-1).addNewCattoDatabase(cats.get(cats.size()-1),cats) ;
      // Printing a message to the user :
