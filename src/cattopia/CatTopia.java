@@ -68,6 +68,7 @@ public class CatTopia {
  
 
         } while (!command.equalsIgnoreCase("5"));
+        System.out.println("thank you (=^･ｪ･^=))ﾉ彡☆");
         System.out.println("Quit.");
 }
     
