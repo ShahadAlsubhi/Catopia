@@ -260,7 +260,7 @@ public class User {
             case 3:
                 System.out.println("what gender do you want to display ? ");
                 String gender=input.next();
-                ArrayList Filtered3=Cat.FilterByGender(gender);
+                ArrayList<Cat> Filtered3=Cat.FilterByGender(gender);
                  for(int i=0;i<Filtered3.size();i++){
                       System.out.println(Filtered3.get(i));
                       System.out.println("---------------------------------------------------------------------");
