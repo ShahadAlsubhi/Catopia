@@ -245,8 +245,11 @@ public class UserTest {
     public void testOfferCat() {
         System.out.println("OfferCat");
         ArrayList<Cat> cats = null;
-        User instance = new User();
+        User instance = new User("001","ahmed","Jeddah","0553498750", null, null);
         instance.OfferCat(cats);
+//        ArrayList<String> expResult = null;
+//        ArrayList<String> result = instance.getOwenedCats();
+//        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
