@@ -17,7 +17,7 @@ public class CatTopia {
     public static void main(String[] args){
 
         ArrayList<User> accounts = new  ArrayList<User>();
-        ArrayList<Cat> cats = new  ArrayList<Cat>();
+        ArrayList<Cat> cats = new  ArrayList<Cat>(100);
         
         addCats(cats); //add cats to the array
         
