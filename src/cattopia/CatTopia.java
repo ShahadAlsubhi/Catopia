@@ -46,7 +46,7 @@ public class CatTopia {
                   System.out.println("enter the cat ID you would like to adopt : ");
                   int CatID=input.nextInt();
                 Individual user =new Individual();
-                  accounts.get(0).adoptionReq(cats.get(CatID-1),user,searchUser(cats.get(CatID-1).getOwnerId(),accounts));
+                  User.adoptionReq(cats.get(CatID-1),user,searchUser(cats.get(CatID-1).getOwnerId(),accounts));
                   cats.get(CatID).setAdoptionState("unavailable");
               
               }else if (command.equalsIgnoreCase("2")) {
@@ -55,12 +55,12 @@ public class CatTopia {
               
             }
                 else if (command.equalsIgnoreCase("3")) {
-                    accounts.get(0).FilterCats(cats);
+                    User.FilterCats();
         
               
             }
                 else if (command.equalsIgnoreCase("4")) {
-                    accounts.get(0).donate();
+                    User.donate();
         
               
             }  
