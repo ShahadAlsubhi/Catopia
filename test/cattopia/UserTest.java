@@ -219,11 +219,12 @@ public class UserTest {
      */
     @Test
     public void testAdoptionApprove() {
-        System.out.println("adoptionApprove");
-        Cat cat = null;
+         System.out.println("adoptionCancel");
+        Cat cat = new Cat(1,"Owner1","Cat1","Male",2,"Breed1",null,"Behavior1",false,"MedicalHistory1",true,true,"AdoptionState1","AdoptionReason1",null,100);
         User.adoptionApprove(cat);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String state=cat.getAdoptionState();
+        String exp="Adopted";
+        assertEquals(exp,state);
     }
 
     /**
@@ -232,10 +233,11 @@ public class UserTest {
     @Test
     public void testAdoptionCancel() {
         System.out.println("adoptionCancel");
-        Cat cat = null;
+        Cat cat = new Cat(1,"Owner1","Cat1","Male",2,"Breed1",null,"Behavior1",false,"MedicalHistory1",true,true,"AdoptionState1","AdoptionReason1",null,100);
         User.adoptionCancel(cat);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String state=cat.getAdoptionState();
+        String exp="Available";
+        assertEquals(exp,state);
     }
 
     /**
