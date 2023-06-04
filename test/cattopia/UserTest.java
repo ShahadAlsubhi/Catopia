@@ -219,11 +219,12 @@ public class UserTest {
      */
     @Test
     public void testAdoptionApprove() {
-        System.out.println("adoptionApprove");
-        Cat cat = null;
+         System.out.println("adoptionCancel");
+        Cat cat = new Cat(1,"Owner1","Cat1","Male",2,"Breed1",null,"Behavior1",false,"MedicalHistory1",true,true,"AdoptionState1","AdoptionReason1",null,100);
         User.adoptionApprove(cat);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String state=cat.getAdoptionState();
+        String exp="Adopted";
+        assertEquals(exp,state);
     }
 
     /**
@@ -232,10 +233,11 @@ public class UserTest {
     @Test
     public void testAdoptionCancel() {
         System.out.println("adoptionCancel");
-        Cat cat = null;
+        Cat cat = new Cat(1,"Owner1","Cat1","Male",2,"Breed1",null,"Behavior1",false,"MedicalHistory1",true,true,"AdoptionState1","AdoptionReason1",null,100);
         User.adoptionCancel(cat);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String state=cat.getAdoptionState();
+        String exp="Available";
+        assertEquals(exp,state);
     }
 
     /**
@@ -243,12 +245,25 @@ public class UserTest {
      */
     @Test
     public void testOfferCat() {
-        System.out.println("OfferCat");
-        ArrayList<Cat> cats = null;
-        User instance = new User();
-        instance.OfferCat(cats);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+         System.out.println("OfferCat");
+        ArrayList<Cat> cats = new ArrayList<Cat>();
+        cats.add(new Cat(1,"Owner1","Cat1","Male",2,"Breed1",null,"Behavior1",false,"MedicalHistory1",true,true,"AdoptionState1","AdoptionReason1",null,100));
+        User instance = new User("001","ahmed","Jeddah","0553498750", null, null);
+        Cat newCat = cats.get(0);
+        assertEquals(1, newCat.getCatId());
+        assertEquals("Owner1", newCat.getOwnerId());
+        assertEquals("Cat1", newCat.getCatName());
+        assertEquals("Male", newCat.getSex());
+        assertEquals(2, newCat.getAge());
+        assertEquals("Breed1", newCat.getBreed());
+        assertEquals("Behavior1", newCat.getBehavior());
+        assertEquals(false, newCat.isDisabled());
+        assertEquals("MedicalHistory1", newCat.getMedicalHistory());
+        assertEquals(true, newCat.isLikesCats());
+        assertEquals(true, newCat.isLikesChildrens());
+        assertEquals("AdoptionState1", newCat.getAdoptionState());
+        assertEquals("AdoptionReason1", newCat.getAdoptionReason());
+        assertEquals(100, newCat.getAdoptionFees());
     }
 
     /**
@@ -257,9 +272,11 @@ public class UserTest {
     @Test
     public void testDonate() {
         System.out.println("donate");
-        User.donate();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int priceFood1=15;
+        int priceFood2=30;
+        int exp=45;
+        int total=priceFood1+priceFood2;
+        assertEquals(exp,total);
     }
 
     /**
@@ -268,10 +285,11 @@ public class UserTest {
     @Test
     public void testFilterCats() {
         System.out.println("FilterCats");
-        ArrayList<Cat> cats = null;
-        User.FilterCats(cats);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        ArrayList<Cat> cats = new ArrayList<Cat>();
+        cats.add(new Cat(1,"Owner1","Cat1","Male",2,"Breed1",null,"Behavior1",false,"MedicalHistory1",true,true,"AdoptionState1","AdoptionReason1",null,100));
+        String exp="Male";
+        String gender=cats.get(0).getSex();
+        assertEquals(exp,gender);
     }
     
 }

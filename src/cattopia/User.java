@@ -211,11 +211,14 @@ public class User {
                 String ManufecDate = input.next();
                 System.out.println("Enter size: ");
                 String size = input.next();
-
+                System.out.println("Enter Price: ");
+                int price = input.nextInt();
+               
                 System.out.println("The brand of the food:"+BrandName
                         +"\nThe food Exp date:"+ExpDate
                         +"\nThe food Manufec date:"+ManufecDate
-                        +"\nThe food size:"+size);
+                        +"\nThe food size:"+size
+                        +"\nThe food price:"+price);
                 LocalDate DonationDate = java.time.LocalDate.now();
                 System.out.println("The donation was in: "+DonationDate);
             }
@@ -237,7 +240,11 @@ public class User {
                 String size = input.next();
                 System.out.println("What'the condition of toys will you donate?"); 
                 String condition = input.next();
-                System.out.println("The size of the toy: "+size+"\nThe condition of the toy: "+condition);
+                System.out.println("Enter Price: ");
+                int price = input.nextInt();
+                System.out.println("The size of the toy: "+size
+                        +"\nThe condition of the toy: "+condition
+                        +"\nThe food price:"+price);
                 LocalDate DonationDate = java.time.LocalDate.now();
                 System.out.println("The donation was in: "+DonationDate);
             }
