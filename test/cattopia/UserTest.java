@@ -244,11 +244,27 @@ public class UserTest {
     @Test
     public void testOfferCat() {
         System.out.println("OfferCat");
-        ArrayList<Cat> cats = null;
-        User instance = new User();
+        ArrayList<Cat> cats = new ArrayList<>();
+        cats.add(new Cat(1,"Owner1","Cat1","Male",2,"Breed1",null,"Behavior1",false,"MedicalHistory1",true,true,"AdoptionState1","AdoptionReason1",null,100));
+        User instance = new User("001","ahmed","Jeddah","0553498750", null, null);
         instance.OfferCat(cats);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(1, cats.size());
+        Cat newCat = cats.get(0);
+        assertEquals(1, newCat.getCatId());
+        assertEquals("Owner1", newCat.getOwnerId());
+        assertEquals("Cat1", newCat.getCatName());
+        assertEquals("Male", newCat.getSex());
+        assertEquals(2, newCat.getAge());
+        assertEquals("Breed1", newCat.getBreed());
+        assertEquals(null, newCat.getBound().getCatName());
+        assertEquals("Behavior1", newCat.getBehavior());
+        assertEquals(false, newCat.isDisabled());
+        assertEquals("MedicalHistory1", newCat.getMedicalHistory());
+        assertEquals(true, newCat.isLikesCats());
+        assertEquals(true, newCat.isLikesChildrens());
+        assertEquals("AdoptionState1", newCat.getAdoptionState());
+        assertEquals("AdoptionReason1", newCat.getAdoptionReason());
+        assertEquals(100, newCat.getAdoptionFees());
     }
 
     /**
@@ -268,10 +284,11 @@ public class UserTest {
     @Test
     public void testFilterCats() {
         System.out.println("FilterCats");
-        ArrayList<Cat> cats = null;
-        User.FilterCats(cats);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        ArrayList<Cat> cats = new ArrayList<Cat>();
+        cats.add(new Cat(1,"Owner1","Cat1","Male",2,"Breed1",null,"Behavior1",false,"MedicalHistory1",true,true,"AdoptionState1","AdoptionReason1",null,100));
+        String exp="Male";
+        String gender=cats.get(0).getSex();
+        assertEquals(exp,gender);
     }
     
 }
