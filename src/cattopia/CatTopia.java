@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package cattopia;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.*;
 /**
  *
@@ -16,7 +14,7 @@ public class CatTopia {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args){
 
         ArrayList<User> accounts = new  ArrayList<User>();
         ArrayList<Cat> cats = new  ArrayList<Cat>();
@@ -36,7 +34,7 @@ public class CatTopia {
            System.out.println("Please Enter your Choice: ");
            
            do { // Reading the commands
-            command = inputUser.next();
+            command = input.next();
               if (command.equalsIgnoreCase("1")) {
                   System.out.println("the available cats : ");
                   
