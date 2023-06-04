@@ -1,6 +1,7 @@
 package cattopia;
 
 
+import java.time.LocalDate;
 import java.util.*;
 
 public class User {
@@ -189,11 +190,9 @@ public class User {
     
     public static void donate(){
         System.out.println("What type of donation will you make?/nFood donation/nMoney donation/nToys donation");
-        System.out.println("When will you donate?(please enter the date in this form dd/mm/yyyy)");
         Scanner input = new Scanner(System.in);
         //Fill donation information
         String DonationType = input.next();
-        String DonationDate = input.next();
         if(DonationType.equalsIgnoreCase("Food donation")){
             //Fill food infrmation    
             System.out.println("Enter Brand name: ");
@@ -224,6 +223,9 @@ public class User {
             String size = input.next();
             System.out.println("The size of the toy: "+size+"/nThe condition of the toy: "+condition);
         }
+        LocalDate DonationDate = java.time.LocalDate.now();
+        System.out.println("The donation was in: "+DonationDate);   
+        
             
     }
     

@@ -1,5 +1,6 @@
 package cattopia;
 
+import java.time.LocalDate;
 import java.util.*;
 
 public class FoodDonation extends Donation{
@@ -8,11 +9,11 @@ public class FoodDonation extends Donation{
     private String ManufecDate;
     private String Size;
 
-    public FoodDonation(Donation DonationType, Date DonationDate, String UserID, String ShelterID) {
+    public FoodDonation(Donation DonationType, LocalDate DonationDate, String UserID, String ShelterID) {
         super(DonationType, DonationDate, UserID, ShelterID);
     }
 
-    public FoodDonation(String BrandName, String ExpDate, String ManufecDate, String Size, Donation DonationType, Date DonationDate, String UserID, String ShelterID) {
+    public FoodDonation(String BrandName, String ExpDate, String ManufecDate, String Size, Donation DonationType, LocalDate DonationDate, String UserID, String ShelterID) {
         super(DonationType, DonationDate, UserID, ShelterID);
         this.BrandName = BrandName;
         this.ExpDate = ExpDate;

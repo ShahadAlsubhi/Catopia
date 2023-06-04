@@ -1,17 +1,17 @@
 package cattopia;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 
 public class ToysDonation extends Donation{
    private String Condition;
    private String Size;
 
-    public ToysDonation(Donation DonationType, Date DonationDate, String UserID, String ShelterID) {
+    public ToysDonation(Donation DonationType, LocalDate DonationDate, String UserID, String ShelterID) {
         super(DonationType, DonationDate, UserID, ShelterID);
     }
 
-    public ToysDonation(String Condition, String Size, Donation DonationType, Date DonationDate, String UserID, String ShelterID) {
+    public ToysDonation(String Condition, String Size, Donation DonationType, LocalDate DonationDate, String UserID, String ShelterID) {
         super(DonationType, DonationDate, UserID, ShelterID);
         this.Condition = Condition;
         this.Size = Size;
