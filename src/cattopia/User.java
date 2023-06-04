@@ -193,13 +193,14 @@ public class User {
     //Donation method start here
     
     public static void donate(){
-        System.out.println("What type of donation will you make?\n1-Food donation\n2-Money donation\n3-Toys donation\n4-Quit");
         Scanner input = new Scanner(System.in);
         //Fill donation information
-        String command = input.next();
+        String command;
 
        do { 
-            if (command.equalsIgnoreCase("1")) {
+           System.out.println("\nWhat type of donation will you make?\n1-Food donation\n2-Money donation\n3-Toys donation\n4-Quit");
+           command = input.next(); 
+           if (command.equalsIgnoreCase("1")) {
             //Fill food infrmation    
                 System.out.println("Enter Brand name: ");
                 String BrandName = input.next();
@@ -214,6 +215,8 @@ public class User {
                         +"\nThe food Exp date:"+ExpDate
                         +"\nThe food Manufec date:"+ManufecDate
                         +"\nThe food size:"+size);
+                LocalDate DonationDate = java.time.LocalDate.now();
+                System.out.println("The donation was in: "+DonationDate);
             }
             if (command.equalsIgnoreCase("2")) {
                 System.out.println("How much money do you want to donate?");
@@ -223,17 +226,21 @@ public class User {
                 }
                 if(amount>0){
                     System.out.println("Thanks for your donation.");
+                    LocalDate DonationDate = java.time.LocalDate.now();
+                    System.out.println("The donation was in: "+DonationDate);
                 }
             }
             if (command.equalsIgnoreCase("3")) {
-                System.out.println("What size and condition of toys will you donate?");
-            //Fill toy infrmation    
-                String condition = input.next();
+                //Fill toys information
+                System.out.println("What'the size of toys will you donate?");
                 String size = input.next();
+                System.out.println("What'the condition of toys will you donate?"); 
+                String condition = input.next();
                 System.out.println("The size of the toy: "+size+"\nThe condition of the toy: "+condition);
+                LocalDate DonationDate = java.time.LocalDate.now();
+                System.out.println("The donation was in: "+DonationDate);
             }
-            LocalDate DonationDate = java.time.LocalDate.now();
-            System.out.println("The donation was in: "+DonationDate);
+           
     } while (!command.equalsIgnoreCase("4"));       
     }
     
