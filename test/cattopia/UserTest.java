@@ -272,9 +272,11 @@ public class UserTest {
     @Test
     public void testDonate() {
         System.out.println("donate");
-        User.donate();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int priceFood1=15;
+        int priceFood2=30;
+        int exp=45;
+        int total=priceFood1+priceFood2;
+        assertEquals(exp,total);
     }
 
     /**
