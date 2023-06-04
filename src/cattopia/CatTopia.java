@@ -25,15 +25,15 @@ public class CatTopia {
         
         String command = null;
            
-           System.out.println("--------------- Welcome to Catopia System ---------------");
-           System.out.println("1. Adopt a Cat");
+            System.out.println("--------------- Welcome to Catopia System ---------------");
+            System.out.println("1. Adopt a Cat");
             System.out.println("2.Offer a cat for adoption");
             System.out.println("3. Filter avaible Cats");
             System.out.println("4. Donate to a Shelter");
             System.out.println("5. Quit");
-           System.out.println("Please Enter your Choice: ");
            
            do { // Reading the commands
+            System.out.println("Please Enter your Choice: ");
             command = input.next();
               if (command.equalsIgnoreCase("1")) {
                   System.out.println("the available cats : ");
@@ -45,7 +45,7 @@ public class CatTopia {
                   
                   System.out.println("enter the cat ID you would like to adopt : ");
                   int CatID=input.nextInt();
-                Individual user =new Individual();
+                  Individual user =new Individual();
                   User.adoptionReq(cats.get(CatID-1),user,searchUser(cats.get(CatID-1).getOwnerId(),accounts));
                   cats.get(CatID).setAdoptionState("unavailable");
               
@@ -68,9 +68,8 @@ public class CatTopia {
  
 
         } while (!command.equalsIgnoreCase("5"));
-           
-           
-    }
+        System.out.println("Quit.");
+}
     
     public static void addCats(ArrayList<Cat> cats){
         

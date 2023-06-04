@@ -241,7 +241,8 @@ public class User {
                 System.out.println("The donation was in: "+DonationDate);
             }
            
-    } while (!command.equalsIgnoreCase("4"));       
+    } while (!command.equalsIgnoreCase("4"));
+       System.out.println("Quit.");
     }
     
     //Donation method end here
