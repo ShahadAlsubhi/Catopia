@@ -18,71 +18,15 @@ public class CatTopia {
      */
     public static void main(String[] args) throws FileNotFoundException {
 
-        File inputData = new File("Database.txt"); // Reads the input data
         ArrayList<User> accounts = new  ArrayList<User>();
         ArrayList<Cat> cats = new  ArrayList<Cat>();
         
         addCats(cats); //add cats to the array
         
-        if (!inputData.exists()) {    //check if the file exists
-            System.out.print("the file " + inputData.getName() + " is not found\n Check in " + inputData.getAbsolutePath());
-            System.exit(0);
-        }
-        
-        Scanner input = new Scanner(inputData); //Scanner to read input Database
-          Scanner inputUser = new Scanner(System.in); //Scanner to read input
+          Scanner input = new Scanner(System.in); //Scanner to read input
         
         String command = null;
-   
-        System.out.println("Loading database. . .");
-        
-          do { // Reading the commands
-            command = input.next();
-              if (command.equalsIgnoreCase("Add_Account_Indi")) {
-                  Individual account = new Individual();
-                  account.setUserID(input.next());
-                  account.setName(input.next());
-                  account.setLocation(input.next());
-                  account.setContactInfo(input.next());
-                  account.setHasCat(input.nextBoolean());              
-                  account.setHasChildren(input.nextBoolean());
-                  accounts.add(account);
-
-              }else if (command.equalsIgnoreCase("Add_Cat")) { 
-                  Cat cat = new Cat();
-                  cat.setCatId(input.nextInt());
-                  cat.setCatName(input.next());
-                  cat.setSex(input.next());
-                  cat.setAge(input.nextInt());
-                  cat.setBreed(input.next());
-//                  cat.setBound(input.next());???????????????????
-                  cat.setBehavior(input.next());
-                  cat.setDisabled(input.nextBoolean());
-                  cat.setMedicalHistory(input.next());
-                  cat.setLikesCats(input.nextBoolean());
-                  cat.setLikesChildrens(input.nextBoolean());
-                  cat.setAdoptionState(input.next());
-                  cat.setAdoptionReason(input.next());
-//                  cat.setAdoptionUpdates();?????????????????????
-                  cat.setAdoptionFees(input.nextInt());
-                  cat.addNewCattoDatabase(cat);
-              
-            }
-                else if (command.equalsIgnoreCase("Add_Account_Shelter")) {
-                  Shelter account = new Shelter();
-                  account.setShelterName(input.next());
-                  account.setVerification(input.nextBoolean());
-//                  account.setRecievedDonation(?????);
-//                  account.setReservedAppointment(??????);
-                  accounts.add(account);
-        
-              
-            }
-
- 
-
-        } while (!command.equalsIgnoreCase("Quit"));
-              command = null;
+           
            System.out.println("--------------- Welcome to Catopia System ---------------");
            System.out.println("1. Adopt a Cat");
             System.out.println("2.Offer a cat for adoption");
