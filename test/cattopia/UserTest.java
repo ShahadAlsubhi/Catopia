@@ -244,8 +244,9 @@ public class UserTest {
     @Test
     public void testOfferCat() {
         System.out.println("OfferCat");
+        ArrayList<Cat> cats = null;
         User instance = new User();
-        instance.OfferCat();
+        instance.OfferCat(cats);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
