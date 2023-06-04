@@ -20,7 +20,7 @@ public class Cat {
     private String adoptionReason;
     private ArrayList<String> adoptionUpdates;  
     private int adoptionFees;
-    public static ArrayList<Cat> cats;
+   // public static ArrayList<Cat> cats;
 
     public Cat(int catId, String ownerId, String catName, String sex, int age, String breed, Cat bound, String behavior, boolean disabled, String medicalHistory, boolean likesCats, boolean likesChildrens, String adoptionState, String adoptionReason, ArrayList<String> adoptionUpdates, int adoptionFees) {
         this.catId = catId;
@@ -177,7 +177,7 @@ public class Cat {
     
     // filter function start
     
-    public static ArrayList<Cat> FilterByBreed(String breed){
+    public static ArrayList<Cat> FilterByBreed(String breed,ArrayList<Cat> cats){
         ArrayList Filtered= new ArrayList();
         for(Cat cat:cats){
             if(cat.getBreed().equalsIgnoreCase(breed)){
@@ -187,11 +187,11 @@ public class Cat {
         return Filtered;
     }
     
-    public static ArrayList<Cat> FilterByAge(int age){
+    public static ArrayList<Cat> FilterByAge(int age,ArrayList<Cat> cats){
         ArrayList Filtered= new ArrayList();
-        for(Cat cat:cats){
-            if(cat.getAge()==age){
-                Filtered.add(cat);
+        for(int i=0;i<cats.size();i++){
+            if(cats.get(i).getAge()==age){
+                Filtered.add(cats.get(i));
             }
         }
         return Filtered;
@@ -207,7 +207,7 @@ public class Cat {
         return Filtered;
     }
     
-    public static ArrayList<Cat> FilterByBehavior(String behavior){
+    public static ArrayList<Cat> FilterByBehavior(String behavior,ArrayList<Cat> cats){
         ArrayList Filtered = new ArrayList();
         for(Cat cat:cats){
             if(cat.getBehavior().equalsIgnoreCase(behavior)){
@@ -217,7 +217,7 @@ public class Cat {
         return Filtered;
     }
     
-    public static ArrayList<Cat> FilterDisabled(){
+    public static ArrayList<Cat> FilterDisabled(ArrayList<Cat> cats){
         ArrayList Filtered = new ArrayList();
         for(Cat cat:cats){
             if(cat.isDisabled()==true){
@@ -227,7 +227,7 @@ public class Cat {
         return Filtered;
     }
     
-    public static ArrayList<Cat> FilterLikesChildren(){
+    public static ArrayList<Cat> FilterLikesChildren(ArrayList<Cat> cats){
         ArrayList Filtered = new ArrayList();
         for(Cat cat:cats){
             if(cat.isLikesChildrens()==true){
@@ -237,7 +237,7 @@ public class Cat {
         return Filtered;
     }
     
-    public static ArrayList<Cat> FilterLikesCats(){
+    public static ArrayList<Cat> FilterLikesCats(ArrayList<Cat> cats){
          ArrayList Filtered = new ArrayList();
         for(Cat cat:cats){
             if(cat.isLikesCats()==true){
@@ -251,7 +251,7 @@ public class Cat {
     
            // A method to search for cat’s bound by its name :
     
-    public Cat Searchbound(String boundName){
+    public Cat Searchbound(String boundName,ArrayList<Cat> cats){
         Cat boundCat = null ;
         for(Cat cat:cats){
             if(cat.getCatName().equalsIgnoreCase(boundName)){
@@ -262,7 +262,7 @@ public class Cat {
     }
       
     // A method to add a new cat to the database ( arraylist ) : 
-      public void addNewCattoDatabase(Cat cat){
+      public void addNewCattoDatabase(Cat cat,ArrayList<Cat> cats){
         cats.add(cat) ;
       }
        public String toString() {

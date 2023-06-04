@@ -181,9 +181,9 @@ public class User {
            // Create Cat object :
        cats.add( new Cat(catId,ownerId,catName, sex, age,breed,null,behavior,disabled,medicalHistory,likesCats,likesChildrens,adoptionState, adoptionReason,null, adoptionFees));
         // Setting the cat’s bound after searching for it : 
-        cats.get(cats.size()-1).setBound(cats.get(cats.size()-1).Searchbound(CatBoundName));
+        cats.get(cats.size()-1).setBound(cats.get(cats.size()-1).Searchbound(CatBoundName,cats));
       // Add it to the cats database ( Arraylist ) :
-        cats.get(cats.size()-1).addNewCattoDatabase(cats.get(cats.size()-1)) ;
+        cats.get(cats.size()-1).addNewCattoDatabase(cats.get(cats.size()-1),cats) ;
      // Printing a message to the user :
         System.out.println("Your Cat is added to the DataBase");
      
@@ -257,7 +257,7 @@ public class User {
             case 1:
                 System.out.println("what breed do you want to display ? ");
                 String breed=input.next();
-                ArrayList Filtered1=Cat.FilterByBreed(breed);
+                ArrayList Filtered1=Cat.FilterByBreed(breed,cats);
                  for(int i=0;i<Filtered1.size();i++){
                       System.out.println(Filtered1.get(i));
                       System.out.println("---------------------------------------------------------------------");
@@ -266,7 +266,7 @@ public class User {
             case 2:
                 System.out.println("what age do you want to display ? ");
                 int age=input.nextInt();
-                ArrayList Filtered2=Cat.FilterByAge(age);
+                ArrayList Filtered2=Cat.FilterByAge(age,cats);
                  for(int i=0;i<Filtered2.size();i++){
                       System.out.println(Filtered2.get(i));
                       System.out.println("---------------------------------------------------------------------");
@@ -284,28 +284,28 @@ public class User {
             case 4:
                 System.out.println("what behavior do you to display ? ");
                 String behavior=input.next();
-                ArrayList Filtered4=Cat.FilterByBehavior(behavior);
+                ArrayList Filtered4=Cat.FilterByBehavior(behavior,cats);
                  for(int i=0;i<Filtered4.size();i++){
                       System.out.println(Filtered4.get(i));
                       System.out.println("---------------------------------------------------------------------");
                   }
                 break;
             case 5: 
-                ArrayList Filtered5=Cat.FilterDisabled();
+                ArrayList Filtered5=Cat.FilterDisabled(cats);
                 for(int i=0;i<Filtered5.size();i++){
                       System.out.println(Filtered5.get(i));
                       System.out.println("---------------------------------------------------------------------");
                   }
                 break;
             case 6:
-                ArrayList Filtered6=Cat.FilterLikesChildren();
+                ArrayList Filtered6=Cat.FilterLikesChildren(cats);
                  for(int i=0;i<Filtered6.size();i++){
                       System.out.println(Filtered6.get(i));
                       System.out.println("---------------------------------------------------------------------");
                   }
                 break;
             case 7:
-                ArrayList Filtered7=Cat.FilterLikesCats();
+                ArrayList Filtered7=Cat.FilterLikesCats(cats);
                  for(int i=0;i<Filtered7.size();i++){
                       System.out.println(Filtered7.get(i));
                       System.out.println("---------------------------------------------------------------------");
