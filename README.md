@@ -1,0 +1,3 @@
+# Catopia 
+application that helps make looking for a cat to adopt easier by making it have a searchable database that can be filtered to the user’s preference or sorted based on their location or date. The database will include all the important information about the cat’s personality, medical history, and a lot more.
+ Users will be able to choose their type of account, whether it is for shelter or an individual. Shelters will need to be verified so they can accept donations. Additionally, users are able to schedule an appointment with a cat shelter to meet their desired cat to see if it fits their needs.
